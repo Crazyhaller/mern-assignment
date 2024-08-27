@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5000/api'
+const API_URL = 'https://heliverse-assignment-cb4v.onrender.com/api'
 
 export const createTeam = async (teamData) => {
   const response = await axios.post(`${API_URL}/team`, teamData)
