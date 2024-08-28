@@ -4,7 +4,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   if (totalPages < 1) return null
 
   const pages = [...Array(totalPages).keys()].map((num) => num + 1)
-  console.log('Pages:', pages)
 
   return (
     <div className="flex justify-center mt-4">

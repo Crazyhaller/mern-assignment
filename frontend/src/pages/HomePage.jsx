@@ -16,7 +16,6 @@ const HomePage = () => {
   const [selectedUsers, setSelectedUsers] = useState([])
   const [teamName, setTeamName] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
-  console.log('Current Page:', currentPage)
   const totalPages = users.totalDocs ? Math.ceil(users.totalDocs / 20) : 0
 
   const [filters, setFilters] = useState({

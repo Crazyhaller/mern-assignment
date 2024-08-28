@@ -7,21 +7,17 @@ exports.getUsers = async (req, res) => {
 
   let query = {}
   if (name) {
-    const [first_name, last_name] = name.split(' ')
-    query.first_name = { $regex: first_name, $options: 'i' }
-    if (last_name) {
-      query.last_name = { $regex: last_name, $options: 'i' }
-    }
+    query.$or = [
+      { first_name: { $regex: name, $options: 'i' } },
+      { last_name: { $regex: name, $options: 'i' } },
+    ]
   }
   if (domain) query.domain = { $regex: new RegExp(domain, 'i') }
-  if (gender) query.gender = { $regex: new RegExp(gender, 'i') }
+  if (gender) query.gender = gender
   if (availability) query.available = availability === 'true'
-
-  console.log('Constructed Query Object NOW:', JSON.stringify(query, null, 2))
 
   try {
     const users = await User.paginate(query, { offset, limit })
-    console.log('Fetched Users:', users)
     res.status(200).json(users)
   } catch (error) {
     console.error('Error fetching users:', error)

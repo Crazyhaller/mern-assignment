@@ -10,30 +10,30 @@ const Filter = ({ filters, setFilters }) => {
       <select
         name="domain"
         onChange={handleChange}
-        className="p-2 rounded border bg-white bg-green-100 border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+        className="p-2 rounded border  bg-green-100 border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500"
       >
         <option value="">All Domain</option>
         <option value="sales">Sales</option>
         <option value="marketing">Marketing</option>
         <option value="finance">Finance</option>
         <option value="management">Management</option>
-        <option value="uidesigning">UI Designing</option>
-        <option value="businessdevelopment">Business Development</option>
+        <option value="ui designing">UI Designing</option>
+        <option value="business development">Business Development</option>
         <option value="it">IT</option>
       </select>
       <select
         name="gender"
         onChange={handleChange}
-        className="p-2 rounded border bg-white bg-blue-100 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 rounded border  bg-blue-100 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <option value="">All Gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
       </select>
       <select
         name="availability"
         onChange={handleChange}
-        className="p-2 rounded border bg-white bg-purple-100 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        className="p-2 rounded border  bg-purple-100 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
       >
         <option value="">All Availability</option>
         <option value="true">Available</option>
